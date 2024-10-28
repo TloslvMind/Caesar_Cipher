@@ -1,4 +1,4 @@
-from functions import encrypt, decrypt
+from functions import caesar
 from logo import logo
 
 print(logo)
@@ -10,10 +10,7 @@ while True:
         continue
     message = input("Type your message:\n")
     shift = int(input("Type the shift number:\n"))
-    if choice == "encode":
-        print(encrypt(message, shift))
-    elif choice == "decode":
-        print(decrypt(message, shift))
+    print(caesar(message, shift, choice))
 
     if input("Type 'yes' if you want to go again. Otherwise type 'no':\n") == "no":
         break
